@@ -1,4 +1,5 @@
 <script>
+  import Entry from "./Entry.svelte";
   export let name;
 
   const items = [];
@@ -21,7 +22,7 @@
     links: [
       { href: "https://www.ioxp.de/en/", desc: "ioxp" },
       { href: "https://angular.io/", desc: "Angular" }
-    ]
+    ],
   });
 
   items.push({
@@ -49,7 +50,8 @@
         desc: "site"
       },
       { href: "https://angular.io/", desc: "Angular" }
-    ]
+    ],
+    image: 'fampedia.png',
   });
 
   items.push({
@@ -74,7 +76,8 @@
         desc: "Code"
       },
       { href: "https://p5js.org/", desc: "p5.js" }
-    ]
+    ],
+    image: 'rockets.png'
   });
 
   items.push({
@@ -87,7 +90,9 @@
       { href: "https://vok-test.netlify.com/", desc: "find it here" },
       { href: "https://vuejs.org/", desc: "Vue.js" },
       { href: "https://github.com/PhilipOe1612340/Vok", desc: "Code" }
-    ]
+    ],
+    image: 'vok.svg',
+    background: true
   });
 
   items.push({
@@ -102,18 +107,9 @@
         href: "https://en.wikipedia.org/wiki/A*_search_algorithm",
         desc: "A* Pathfinding Algorithm"
       }
-    ]
+    ],
+    image:'aStart.png'
   });
-
-  function replaceLinks(str, links = []) {
-    return str.replace(/\|/g, "<br>").replace(/\{\d+\}/g, match => {
-      const li = links[Number(match.slice(1, -1))];
-      if (!li) {
-        return "";
-      }
-      return `<a href="${li.href}">${li.desc}</a>`;
-    });
-  }
 </script>
 
 <style>
@@ -127,16 +123,10 @@
     height: auto;
     color: white;
     padding: 0;
+    padding-bottom: 50px;
     background: linear-gradient(to left, black 5%, var(--background));
     background-size: 100%;
     background-repeat: no-repeat;
-  }
-
-  @media (min-height: 700px) {
-    :global(body) {
-      scroll-snap-type: both;
-      scroll-padding: 10px;
-    }
   }
 
   :global(body:before) {
@@ -150,78 +140,7 @@
     background: var(--background);
   }
 
-  .item {
-    display: flex;
-    position: relative;
-    scroll-snap-align: start;
-  }
-
-  .label::after {
-    content: "";
-    position: absolute;
-    right: -31px;
-    top: 6px;
-    background: var(--accent);
-    height: 10px;
-    width: 10px;
-  }
-
-  .label {
-    flex: 1 1 17%;
-    margin-left: 4%;
-    margin-bottom: 25px;
-    margin-top: 23px;
-    top: 22px;
-    max-width: 17%;
-    text-align: center;
-    display: inline-table;
-    position: sticky;
-    word-break: break-word;
-  }
-
-  @media (max-width: 600px) {
-    .label {
-      flex: 1 1 10px;
-      width: 10px;
-      min-width: 10px;
-    }
-  }
-
-  .spacer {
-    padding-left: 25px;
-    border-left: 2px solid var(--accent);
-    margin-left: 25px;
-    width: 100%;
-    background: linear-gradient(
-      to right,
-      transparent 5%,
-      rgba(255, 255, 255, 0.05) 95%
-    );
-    min-height: calc(360px - 35vw);
-  }
-
-  .content {
-    border-top: 1px solid #add8e636;
-    margin-bottom: 70px;
-    padding: 0 2%;
-  }
-
-  span {
-    display: inline-block;
-    margin-bottom: 15px;
-    margin-left: 2%;
-  }
-
-  :global(a) {
-    color: var(--accent) !important;
-  }
-
-  li {
-    margin-left: 3%;
-  }
-
   h1 {
-    scroll-snap-align: start;
     text-align: center;
     margin-bottom: 50px;
     padding-top: 150px;
@@ -231,22 +150,5 @@
 <h1>A History of Philip</h1>
 
 {#each items as item}
-  <div class="item">
-    <div class="label">{item.label}</div>
-    <div class="spacer">
-      <div class="content">
-        <h3>{item.header}</h3>
-        <span>
-          {@html replaceLinks(item.body, item.links)}
-        </span>
-        <ul>
-          {#each item.list as li}
-            <li>
-              {@html replaceLinks(li, item.links)}
-            </li>
-          {/each}
-        </ul>
-      </div>
-    </div>
-  </div>
+  <Entry config={item} />
 {/each}
