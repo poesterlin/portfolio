@@ -78,7 +78,7 @@
       },
       { href: "https://p5js.org/", desc: "p5.js" }
     ],
-    image: 'rockets.png'
+    image: 'rockets.jpg'
   });
 
   items.push({
@@ -109,7 +109,7 @@
         desc: "A* Pathfinding Algorithm"
       }
     ],
-    image:'aStart.png'
+    image:'aStart.jpg'
   });
 </script>
 
