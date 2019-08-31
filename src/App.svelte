@@ -23,6 +23,7 @@
       { href: "https://www.ioxp.de/en/", desc: "ioxp" },
       { href: "https://angular.io/", desc: "Angular" }
     ],
+    image: 'wm.jpg',
   });
 
   items.push({
