@@ -23,14 +23,14 @@
       { href: "https://www.ioxp.de/en/", desc: "ioxp" },
       { href: "https://angular.io/", desc: "Angular" }
     ],
-    image: 'wm.jpg',
+    image: "wm.jpg"
   });
 
   items.push({
     label: "2019",
     header: "Fampedia",
     body:
-      "During an international design thinking course, our team was tasked to develop a product that is related to graveyards. We had some initial problems because our ideas for graveyards, like for example a digital tombstone, all had the same problem: When and how do we collect information about the deceased person? This lead us on the path of families. After a lot of research and interviews, we came up with Fampedia. With Fampedia, a family can create their own private space, where they can collect moments. This information belongs to every family member and everything is saved for the future. This makes Fampedia different from traditional social networks and helps to bring all generations together. For example, less tech-savvy members can get help from other family members. | | Sadly the {1} was shut after the project ended, but you can {0}. || Technologies used:",
+      "During an international design thinking course, our team was tasked to develop a product that is related to graveyards. We had some initial problems because our ideas for graveyards, like for example a digital tombstone, all had the same problem: When and how do we collect information about the deceased person? This lead us on the path of families. After a lot of research and interviews, we came up with Fampedia. With Fampedia, a family can create their own private space, where they can collect moments. This information belongs to every family member and everything is saved for the future. This makes Fampedia different from traditional social networks and helps to bring all generations together. For example, less tech-savvy members can get help from other family members. | | Sadly the {1} was shut after the project ended, but you can {0}. |Or visit the {3} for a more insights. || Technologies used:",
     list: [
       "Angular",
       "Express",
@@ -50,9 +50,13 @@
         href: "https://fampedia.de",
         desc: "site"
       },
-      { href: "https://angular.io/", desc: "Angular" }
+      { href: "https://angular.io/", desc: "Angular" },
+      {
+        href: "https://inno-space.de/projects.html",
+        desc: "project page"
+      }
     ],
-    image: 'fampedia.png',
+    image: "fampedia.png"
   });
 
   items.push({
@@ -78,7 +82,7 @@
       },
       { href: "https://p5js.org/", desc: "p5.js" }
     ],
-    image: 'rockets.jpg'
+    image: "rockets.jpg"
   });
 
   items.push({
@@ -92,7 +96,7 @@
       { href: "https://vuejs.org/", desc: "Vue.js" },
       { href: "https://github.com/PhilipOe1612340/Vok", desc: "Code" }
     ],
-    image: 'vok.svg',
+    image: "vok.svg",
     background: true
   });
 
@@ -109,7 +113,7 @@
         desc: "A* Pathfinding Algorithm"
       }
     ],
-    image:'aStart.jpg'
+    image: "aStart.jpg"
   });
 </script>
 
