@@ -52,7 +52,7 @@
       },
       { href: "https://angular.io/", desc: "Angular" },
       {
-        href: "https://inno-space.de/projects.html",
+        href: "https://inno-space.de/projects/fampedia/",
         desc: "project page"
       }
     ],
