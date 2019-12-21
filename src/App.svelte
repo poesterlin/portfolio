@@ -27,13 +27,19 @@
         header: "Webdevelopment at ioxp",
         body:
           "During my internship semester, I worked at {0} as a web developer. Since the team was tiny in the beginning, I was able to take a peek into a wide spectrum of tasks including <b>Design, Testing, System architecture and advanced Web APIs.</b> I love learning about new technologies and I was able to implement/apply techniques I learned about in podcasts or twitter. I mainly worked with {1}. Since I couldn't leave all the stuff I build there behind, I continued to work for ioxp as a working student after the semester was over. || Here are some more technologies I worked with:",
-    list: ["Typescript", "RxJs", "Adobe XD", "Testcafe", "D3.js"],
-    links: [
-      { href: "https://www.ioxp.de/en/", desc: "ioxp" },
-      { href: "https://angular.io/", desc: "Angular" }
-    ],
-    image: "wm.jpg"
+        list: ["Typescript", "RxJs", "Adobe XD", "Testcafe", "D3.js"],
+        links: [
+          { href: "https://www.ioxp.de/en/", desc: "ioxp" },
+          { href: "https://angular.io/", desc: "Angular" }
+        ],
+        image: "wm.jpg"
       },
+      {
+        header: "Masters degree at University of Konstance",
+        body: "Courses and Interests:",
+        list: ["Graph Drawing with {0}", "Machine Learning", "Data Science"],
+        links: [{ href: "https://ogdf.uos.de/", desc: "OGDF" }]
+      }
     ]
   });
 
@@ -41,32 +47,32 @@
     label: "2019",
     content: [
       {
-    header: "Fampedia",
-    body:
-      "During an international design thinking course, our team was tasked to develop a product that is related to graveyards. We had some initial problems because our ideas for graveyards, like for example a digital tombstone, all had the same problem: When and how do we collect information about the deceased person? This lead us on the path of families. After a lot of research and interviews, we came up with Fampedia. With Fampedia, a family can create their own private space, where they can collect moments. This information belongs to every family member and everything is saved for the future. This makes Fampedia different from traditional social networks and helps to bring all generations together. For example, less tech-savvy members can get help from other family members. | | Sadly the {1} was shut after the project ended, but you can {0}. |Or visit the {3} for a more insights. || Technologies used:",
-    list: [
-      "Angular",
-      "Express",
-      "Docker",
-      "MongoDB",
-      "GitLab CI",
-      "Sharp.js",
-      "Socket.io",
-      "AWS & Netlify Hosting"
-    ],
-    links: [
-      {
-        href: "https://github.com/PhilipOe1612340/Fampedia",
-        desc: "find the code here"
-      },
-      {
-        href: "https://fampedia.de",
-        desc: "site"
-      },
-      { href: "https://angular.io/", desc: "Angular" },
-      {
-        href: "https://inno-space.de/projects/fampedia/",
-        desc: "project page"
+        header: "Fampedia",
+        body:
+          "During an international design thinking course, our team was tasked to develop a product that is related to graveyards. We had some initial problems because our ideas for graveyards, like for example a digital tombstone, all had the same problem: When and how do we collect information about the deceased person? This lead us on the path of families. After a lot of research and interviews, we came up with Fampedia. With Fampedia, a family can create their own private space, where they can collect moments. This information belongs to every family member and everything is saved for the future. This makes Fampedia different from traditional social networks and helps to bring all generations together. For example, less tech-savvy members can get help from other family members. | | Sadly the {1} was shut after the project ended, but you can {0}. |Or visit the {3} for a more insights. || Technologies used:",
+        list: [
+          "Angular",
+          "Express",
+          "Docker",
+          "MongoDB",
+          "GitLab CI",
+          "Sharp.js",
+          "Socket.io",
+          "AWS & Netlify Hosting"
+        ],
+        links: [
+          {
+            href: "https://github.com/PhilipOe1612340/Fampedia",
+            desc: "find the code here"
+          },
+          {
+            href: "https://fampedia.de",
+            desc: "site"
+          },
+          { href: "https://angular.io/", desc: "Angular" },
+          {
+            href: "https://inno-space.de/projects/fampedia/",
+            desc: "project page"
           }
         ],
         image: "fampedia.png"
@@ -81,22 +87,22 @@
         header: "Smart Rockets",
         body:
           "During a course on machine learning, I build a version of the {0}. The rockets have to learn to hit a target and to avoid obstacles. The AI is based on a simulated evolutionary process. The population starts off with random genes and gets smarter over time. Like in nature, rockets that have a high success rate are able to survive to produce the next generation.",
-    list: ["{1}", "{2}", "Created using {3}"],
-    links: [
-      {
-        href: "http://blog.blprnt.com/blog/blprnt/project-smart-rockets",
-        desc: "Smart Rockets"
-      },
-      {
-        href:
-          "https://philipoe1612340.github.io/MLE-uebungen/Woche2/index.html",
-        desc: "Live Version"
-      },
-      {
-        href:
-          "https://github.com/PhilipOe1612340/MLE-uebungen/tree/master/Woche2",
-        desc: "Code"
-      },
+        list: ["{1}", "{2}", "Created using {3}"],
+        links: [
+          {
+            href: "http://blog.blprnt.com/blog/blprnt/project-smart-rockets",
+            desc: "Smart Rockets"
+          },
+          {
+            href:
+              "https://philipoe1612340.github.io/MLE-uebungen/Woche2/index.html",
+            desc: "Live Version"
+          },
+          {
+            href:
+              "https://github.com/PhilipOe1612340/MLE-uebungen/tree/master/Woche2",
+            desc: "Code"
+          },
           { href: "https://p5js.org/", desc: "p5.js" }
         ],
         image: "rockets.jpg"
@@ -111,11 +117,11 @@
         header: "Universal Vocabulary Test",
         body:
           "In school, I always used an app to learn for vocabulary tests. Sadly this app was no longer working on the latest version of Android. I took this opportunity to create a small web app, that had the same features as the app, but also the flexibility of a website. There you can import an Excel sheet of your vocabulary list and test yourself. || You can {0}.",
-    list: ["{2}", "created using {1}"],
-    links: [
-      { href: "https://vok-test.netlify.com/", desc: "find it here" },
-      { href: "https://vuejs.org/", desc: "Vue.js" },
-      { href: "https://github.com/PhilipOe1612340/Vok", desc: "Code" }
+        list: ["{2}", "created using {1}"],
+        links: [
+          { href: "https://vok-test.netlify.com/", desc: "find it here" },
+          { href: "https://vuejs.org/", desc: "Vue.js" },
+          { href: "https://github.com/PhilipOe1612340/Vok", desc: "Code" }
         ],
         image: "vok.svg",
         background: true
@@ -130,12 +136,12 @@
         header: "A* Pathfinding in Scratch",
         body:
           "In school, I programmed my first algorithms in {0}. It's a visual programming language designed for kids. But even though it looks basic, it secretly taught me a lot of advanced CS concepts and analytical thinking. For my A levels, I did a presentation of the {1} and presented a version programmed in Scratch. Sadly the file got lost over the years.",
-    list: [],
-    links: [
-      { href: "https://scratch.mit.edu/", desc: "Scratch" },
-      {
-        href: "https://en.wikipedia.org/wiki/A*_search_algorithm",
-        desc: "A* Pathfinding Algorithm"
+        list: [],
+        links: [
+          { href: "https://scratch.mit.edu/", desc: "Scratch" },
+          {
+            href: "https://en.wikipedia.org/wiki/A*_search_algorithm",
+            desc: "A* Pathfinding Algorithm"
           }
         ],
         image: "aStart.jpg"
