@@ -202,14 +202,6 @@
     position: relative;
   }
 
-  @media (max-width: 600px) {
-    .label {
-      flex: 1 1 10px;
-      width: 10px;
-      min-width: 10px;
-    }
-  }
-
   .label::after {
     content: "";
     position: absolute;
@@ -231,6 +223,15 @@
     display: inline-table;
     position: sticky;
     word-break: break-word;
+  }
+
+  @media (max-width: 600px) {
+    .label {
+      flex: 1 1 10px;
+      width: 10px;
+      min-width: 10px;
+      max-width: 10px;
+    }
   }
 </style>
 
