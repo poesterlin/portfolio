@@ -6,28 +6,41 @@
 
   items.push({
     label: "Intro",
-    header: "Introduction",
-    body:
-      "<b>Hi, I'm Philip.</b> I love to <pre style='display:inline;font-size:16px'>CODE</pre> and to solve problems. |I work best in open, creative and supportive environments. |This is a history of some projects I'm particulary proud of 😊. ",
-    list: [],
-    links: [{ href: "https://www.github.com", desc: "Github" }]
+    content: [
+      {
+        header: "Introduction",
+        body:
+          "<b>Hi, I'm Philip.</b> I love to <pre style='display:inline;font-size:16px'>CODE</pre> and to solve problems. |I work best in open, creative and supportive environments. |This is a history of some projects I'm particulary proud of 😊.||{1}",
+        list: [],
+        links: [
+          { href: "https://www.github.com", desc: "Github" },
+          { href: "mailto:philip.oesterlin@gmail", desc: "Reach out" }
+        ]
+      }
+    ]
   });
 
   items.push({
     label: "Ongoing",
-    header: "Webdevelopment at ioxp",
-    body:
-      "During my internship semester, I worked at {0} as a web developer. Since the team was tiny in the beginning, I was able to take a peek into a wide spectrum of tasks including <b>Design, Testing, System architecture and advanced Web APIs.</b> I love learning about new technologies and I was able to implement/apply techniques I learned about in podcasts or twitter. I mainly worked with {1}. Since I couldn't leave all the stuff I build there behind, I continued to work for ioxp as a working student after the semester was over. || Here are some more technologies I worked with:",
+    content: [
+      {
+        header: "Webdevelopment at ioxp",
+        body:
+          "During my internship semester, I worked at {0} as a web developer. Since the team was tiny in the beginning, I was able to take a peek into a wide spectrum of tasks including <b>Design, Testing, System architecture and advanced Web APIs.</b> I love learning about new technologies and I was able to implement/apply techniques I learned about in podcasts or twitter. I mainly worked with {1}. Since I couldn't leave all the stuff I build there behind, I continued to work for ioxp as a working student after the semester was over. || Here are some more technologies I worked with:",
     list: ["Typescript", "RxJs", "Adobe XD", "Testcafe", "D3.js"],
     links: [
       { href: "https://www.ioxp.de/en/", desc: "ioxp" },
       { href: "https://angular.io/", desc: "Angular" }
     ],
     image: "wm.jpg"
+      },
+    ]
   });
 
   items.push({
     label: "2019",
+    content: [
+      {
     header: "Fampedia",
     body:
       "During an international design thinking course, our team was tasked to develop a product that is related to graveyards. We had some initial problems because our ideas for graveyards, like for example a digital tombstone, all had the same problem: When and how do we collect information about the deceased person? This lead us on the path of families. After a lot of research and interviews, we came up with Fampedia. With Fampedia, a family can create their own private space, where they can collect moments. This information belongs to every family member and everything is saved for the future. This makes Fampedia different from traditional social networks and helps to bring all generations together. For example, less tech-savvy members can get help from other family members. | | Sadly the {1} was shut after the project ended, but you can {0}. |Or visit the {3} for a more insights. || Technologies used:",
@@ -54,16 +67,20 @@
       {
         href: "https://inno-space.de/projects/fampedia/",
         desc: "project page"
+          }
+        ],
+        image: "fampedia.png"
       }
-    ],
-    image: "fampedia.png"
+    ]
   });
 
   items.push({
     label: "2018",
-    header: "Smart Rockets",
-    body:
-      "During a course on machine learning, I build a version of the {0}. The rockets have to learn to hit a target and to avoid obstacles. The AI is based on a simulated evolutionary process. The population starts off with random genes and gets smarter over time. Like in nature, rockets that have a high success rate are able to survive to produce the next generation.",
+    content: [
+      {
+        header: "Smart Rockets",
+        body:
+          "During a course on machine learning, I build a version of the {0}. The rockets have to learn to hit a target and to avoid obstacles. The AI is based on a simulated evolutionary process. The population starts off with random genes and gets smarter over time. Like in nature, rockets that have a high success rate are able to survive to produce the next generation.",
     list: ["{1}", "{2}", "Created using {3}"],
     links: [
       {
@@ -80,40 +97,50 @@
           "https://github.com/PhilipOe1612340/MLE-uebungen/tree/master/Woche2",
         desc: "Code"
       },
-      { href: "https://p5js.org/", desc: "p5.js" }
-    ],
-    image: "rockets.jpg"
+          { href: "https://p5js.org/", desc: "p5.js" }
+        ],
+        image: "rockets.jpg"
+      }
+    ]
   });
 
   items.push({
     label: "2017",
-    header: "Universal Vocabulary Test",
-    body:
-      "In school, I always used an app to learn for vocabulary tests. Sadly this app was no longer working on the latest version of Android. I took this opportunity to create a small web app, that had the same features as the app, but also the flexibility of a website. There you can import an Excel sheet of your vocabulary list and test yourself. || You can {0}.",
+    content: [
+      {
+        header: "Universal Vocabulary Test",
+        body:
+          "In school, I always used an app to learn for vocabulary tests. Sadly this app was no longer working on the latest version of Android. I took this opportunity to create a small web app, that had the same features as the app, but also the flexibility of a website. There you can import an Excel sheet of your vocabulary list and test yourself. || You can {0}.",
     list: ["{2}", "created using {1}"],
     links: [
       { href: "https://vok-test.netlify.com/", desc: "find it here" },
       { href: "https://vuejs.org/", desc: "Vue.js" },
       { href: "https://github.com/PhilipOe1612340/Vok", desc: "Code" }
-    ],
-    image: "vok.svg",
-    background: true
+        ],
+        image: "vok.svg",
+        background: true
+      }
+    ]
   });
 
   items.push({
     label: "2015",
-    header: "A* Pathfinding in Scratch",
-    body:
-      "In school, I programmed my first algorithms in {0}. It's a visual programming language designed for kids. But even though it looks basic, it secretly taught me a lot of advanced CS concepts and analytical thinking. For my A levels, I did a presentation of the {1} and presented a version programmed in Scratch. Sadly the file got lost over the years.",
+    content: [
+      {
+        header: "A* Pathfinding in Scratch",
+        body:
+          "In school, I programmed my first algorithms in {0}. It's a visual programming language designed for kids. But even though it looks basic, it secretly taught me a lot of advanced CS concepts and analytical thinking. For my A levels, I did a presentation of the {1} and presented a version programmed in Scratch. Sadly the file got lost over the years.",
     list: [],
     links: [
       { href: "https://scratch.mit.edu/", desc: "Scratch" },
       {
         href: "https://en.wikipedia.org/wiki/A*_search_algorithm",
         desc: "A* Pathfinding Algorithm"
+          }
+        ],
+        image: "aStart.jpg"
       }
-    ],
-    image: "aStart.jpg"
+    ]
   });
 </script>
 
@@ -150,10 +177,66 @@
     margin-bottom: 50px;
     padding-top: 150px;
   }
+
+  .spacer {
+    padding-left: 25px;
+    border-left: 2px solid var(--accent);
+    margin-left: 25px;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      transparent 5%,
+      rgba(255, 255, 255, 0.05) 95%
+    );
+    min-height: calc(360px - 35vw);
+  }
+
+  .item {
+    display: flex;
+    position: relative;
+  }
+
+  @media (max-width: 600px) {
+    .label {
+      flex: 1 1 10px;
+      width: 10px;
+      min-width: 10px;
+    }
+  }
+
+  .label::after {
+    content: "";
+    position: absolute;
+    right: -31px;
+    top: 6px;
+    background: var(--accent);
+    height: 10px;
+    width: 10px;
+  }
+
+  .label {
+    flex: 1 1 17%;
+    margin-left: 4%;
+    margin-bottom: 25px;
+    margin-top: 23px;
+    top: 22px;
+    max-width: 17%;
+    text-align: center;
+    display: inline-table;
+    position: sticky;
+    word-break: break-word;
+  }
 </style>
 
 <h1>A History of Philip</h1>
 
-{#each items as item}
-  <Entry config={item} />
+{#each items as year}
+  <div class="item">
+    <div class="label">{year.label}</div>
+    <div class="spacer">
+      {#each year.content as item}
+        <Entry config={item} />
+      {/each}
+    </div>
+  </div>
 {/each}
