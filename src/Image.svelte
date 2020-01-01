@@ -47,7 +47,7 @@
   }
   @media (min-width: 600px) {
     button:hover::before {
-      box-shadow: 4px 4px #2e3a3f, 5px 5px var(--accent);
+      box-shadow: 4px 4px var(--background), 5px 5px var(--accent);
     }
     button::before {
       content: "";
@@ -60,7 +60,7 @@
       height: 100%;
       z-index: 0;
       transition: 400ms all;
-      box-shadow: 4px 4px #29353a, 5px 5px #4a5c63;
+      box-shadow: 4px 4px var(--background), 5px 5px var(--borders);
     }
   }
 

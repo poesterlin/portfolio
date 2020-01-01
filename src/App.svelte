@@ -154,7 +154,7 @@
   :global(body) {
     --accent: #ffca28;
     --background: #253136;
-
+    --borders: #add8e636;
     width: 1000px;
     max-width: 98vw;
     margin: auto;
@@ -165,6 +165,18 @@
     background: linear-gradient(to left, black 5%, var(--background));
     background-size: 100%;
     background-repeat: no-repeat;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :global(body) {
+      --accent: #61c89d;
+      --background: #f9f9f9;
+      --borders: #00000052;
+      color: #292929;
+    }
+    :global(a) {
+      font-weight: 500;
+    }
   }
 
   :global(body:before) {

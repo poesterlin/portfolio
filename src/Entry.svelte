@@ -17,7 +17,7 @@
 
 <style>
   .content {
-    border-top: 1px solid #add8e636;
+    border-top: 1px solid var(--borders);
     margin-bottom: 70px;
     padding: 0 2%;
   }
