@@ -35,7 +35,7 @@
         image: "wm.jpg"
       },
       {
-        header: "Masters degree at University of Konstance",
+        header: "Masters degree at University of Constance",
         body: "Courses and Interests:",
         list: ["Graph Drawing with {0}", "Machine Learning", "Data Science"],
         links: [{ href: "https://ogdf.uos.de/", desc: "OGDF" }]
