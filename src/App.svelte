@@ -44,6 +44,29 @@
   });
 
   items.push({
+    label: "2020",
+    content: [
+      {
+        header: "Image Search Engine",
+        body:
+          "For a university course my team and I created a search engine that can find similar images to a refrence image. We used an auto encoder model that is able to compress the information of on a 32x32 image to only 10 numbers. This vector can than be used to compare images. Without the compression of the model you can not directly compare images. They can show almost the same things but have different very pixel values. We used the {0} for this project. We also included a lot of evaluation methods and visualisations to test the results. |To get a closer look, {1}",
+        list: [],
+        links: [
+          {
+            href: "https://pytorch.org/",
+            desc: "Pytorch Machine Learning Framework"
+          },
+          {
+            href: "https://github.com/PhilipOe1612340/Fampedia",
+            desc: "find the code here"
+          },
+        ],
+        image: "pytorch.jpg"
+      }
+    ]
+  });
+
+  items.push({
     label: "2019",
     content: [
       {
