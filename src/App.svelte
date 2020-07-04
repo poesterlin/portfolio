@@ -137,6 +137,17 @@
     label: "2017",
     content: [
       {
+        header: "Project Semester",
+        body:
+          "At the University of applied science in Mannheim, the fourth semester is always something special. For the first time students get to work with a real company on a real project but in a save environment. Our task was it to build a platform for {0}, a company that develops conversational commerce and AI software. Using this platform you were supposed to be able to configure text bots that can then be deployed to interact with customers. We worked for 10 weeks in a team of 4 design students and 6 computer science students. Since we had never done anything on that scale before everything was a little messy at first, but we were still proud of what we had achieved in such a short time. |The finished code is a little ruf around the edges but you can find it {1}. ||The technologies we used to make this happen were:",
+        list: ["Vue.js", "Docker + Compose", "Node.js"],
+        links: [
+          { href: "https://www.liveperson.com/", desc: "Liveperson" },
+          { href: "https://github.com/PhilipOe1612340/SEP-deploy", desc: "here" },
+        ],
+        image: "SEP.png",
+      },
+      {
         header: "Universal Vocabulary Test",
         body:
           "In school, I always used an app to learn for vocabulary tests. Sadly this app was no longer working on the latest version of Android. I took this opportunity to create a small web app, that had the same features as the app, but also the flexibility of a website. There you can import an Excel sheet of your vocabulary list and test yourself. || You can {0}.",
