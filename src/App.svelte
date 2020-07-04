@@ -57,7 +57,7 @@
             desc: "Pytorch Machine Learning Framework"
           },
           {
-            href: "https://github.com/PhilipOe1612340/Fampedia",
+            href: "https://github.com/PhilipOe1612340/MMR-Autoencoder",
             desc: "find the code here"
           },
         ],
