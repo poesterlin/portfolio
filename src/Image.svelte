@@ -1,6 +1,6 @@
 <script>
   import { fade } from "svelte/transition";
-  import { cubicInOut } from 'svelte/easing';
+  import { cubicInOut } from "svelte/easing";
 
   export let src;
   export let alt;
@@ -8,15 +8,20 @@
 
   $: overlay = false;
 
-  /**
-   * @param e{Event}
-   */
   function toggleOverlay(e) {
     overlay = !overlay;
     e.cancelBubble = true;
+    if (overlay) {
+      window.location.hash = "img";
+      window.addEventListener("popstate", () => (overlay = false), {
+        once: true
+      });
+    } else {
+      window.history.back();
+    }
   }
 
-  function zoom(node, {duration = 350 }) {
+  function zoom(node, { duration = 350 }) {
     return {
       delay: 0,
       duration,
@@ -99,7 +104,14 @@
 </button>
 
 {#if overlay}
-  <div class="overlayContainer">
-    <img class="big" class:background on:click={toggleOverlay} {src} {alt} on:click={toggleOverlay} in:zoom out:fade />
+  <div class="overlayContainer" on:click={toggleOverlay}>
+    <img
+      class="big"
+      class:background
+      {src}
+      {alt}
+      on:click={toggleOverlay}
+      in:zoom
+      out:fade />
   </div>
 {/if}
