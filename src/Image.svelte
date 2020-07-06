@@ -1,12 +1,28 @@
 <script>
+  import { fade } from "svelte/transition";
+  import { cubicInOut } from 'svelte/easing';
+
   export let src;
   export let alt;
   export let background;
 
   $: overlay = false;
 
-  function toggleOverlay() {
+  /**
+   * @param e{Event}
+   */
+  function toggleOverlay(e) {
     overlay = !overlay;
+    e.cancelBubble = true;
+  }
+
+  function zoom(node, {duration = 350 }) {
+    return {
+      delay: 0,
+      duration,
+      easing: cubicInOut,
+      css: t => `opacity: ${t}; transform: scale(${t})`
+    };
   }
 </script>
 
@@ -79,21 +95,11 @@
 </style>
 
 <button>
-  <img
-    class="small"
-    class:background={background === true}
-    on:click={toggleOverlay}
-    {src}
-    {alt} />
+  <img class="small" class:background on:click={toggleOverlay} {src} {alt} />
 </button>
 
-{#if overlay === true}
-  <div class="overlayContainer" on:click={toggleOverlay}>
-    <img
-      class="big"
-      class:background={background === true}
-      on:click={toggleOverlay}
-      {src}
-      {alt} />
+{#if overlay}
+  <div class="overlayContainer">
+    <img class="big" class:background on:click={toggleOverlay} {src} {alt} on:click={toggleOverlay} in:zoom out:fade />
   </div>
 {/if}
