@@ -14,10 +14,10 @@
         list: [],
         links: [
           { href: "https://www.github.com", desc: "Github" },
-          { href: "mailto:philip.oesterlin@gmail", desc: "Reach out" }
-        ]
-      }
-    ]
+          { href: "mailto:philip.oesterlin@gmail", desc: "Reach out" },
+        ],
+      },
+    ],
   });
 
   items.push({
@@ -29,18 +29,46 @@
           "In September of 2020 iOXP, the company I was working for as a working student, was taken over by {1} {0}. I continued to work there since it was exiting to get to know a different and so much bigger company for the first time.",
         list: [],
         links: [
-          { href: "https://www.ptc.com/de/news/2020/ptc-uebernimmt-ioxp", desc: "(german press release)" },
+          {
+            href: "https://www.ptc.com/de/news/2020/ptc-uebernimmt-ioxp",
+            desc: "(german press release)",
+          },
           { href: "https://www.ptc.com/", desc: "PTC" },
         ],
-        // image: "wm.jpg"
       },
       {
         header: "Masters degree at University of Constance",
         body: "Courses and Interests:",
-        list: ["Graph Drawing with {0}", "Machine Learning", "Data Science"],
-        links: [{ href: "https://ogdf.uos.de/", desc: "OGDF" }]
+        list: [
+          "Graph Drawing with {0}",
+          "Data Visualisation",
+          "Machine Learning",
+          "Data Science",
+          "Virtual Reality Applications for Mental Health",
+        ],
+        links: [{ href: "https://ogdf.uos.de/", desc: "OGDF" }],
       },
-    ]
+    ],
+  });
+
+  items.push({
+    label: "2021",
+    content: [
+      {
+        header: "Sentiment Analisys for Corona Tweets",
+        body: "For a practical data science project, my team and I were tasked to create an interactive data visualistion tool from the ground up. We started by collecting tweets from the twitter api where users were writing about the pandemic. Then we trained a neural network on some labeled data that was able to predict the mood the author was in. Together with data about the pandemic this was shown in an interactive map.|We deployed it in the universities kubernetes cluster.||Technologies used:",
+        list: ["Svelte", "Python", "Tensorflow + Keras", "Postgis"],
+        links: [],
+        image: "moodvis.webp",
+      },
+      {
+        header: "Ufo Sightings Map",
+        body: "For a geo visualisation project we created a fun web tool were you could explore reports of ufo sighings collected by the {0}. We got over 90 thousand reports from their webseite and it's a lot of fun to explore in an interactive way.|You can find instructions and the code {1}.||Technologies used:",
+        list: ["Angular", "Docker", "Postgis"],
+        links: [{href:"http://www.nuforc.org/", desc: 'National UFO Reporting Center'}, {href: 'https://github.com/PhilipOe1612340/UfoVis', desc: 'here'}],
+        image: "ufovis.webp",
+      },
+    ],
   });
 
   items.push({
@@ -54,16 +82,16 @@
         links: [
           {
             href: "https://pytorch.org/",
-            desc: "Pytorch Machine Learning Framework"
+            desc: "Pytorch Machine Learning Framework",
           },
           {
             href: "https://github.com/PhilipOe1612340/MMR-Autoencoder",
-            desc: "find the code here"
+            desc: "find the code here",
           },
         ],
-        image: "pytorch.jpg"
-      }
-    ]
+        image: "pytorch.jpg",
+      },
+    ],
   });
 
   items.push({
@@ -81,41 +109,41 @@
           "GitLab CI",
           "Sharp.js",
           "Socket.io",
-          "AWS & Netlify Hosting"
+          "AWS & Netlify Hosting",
         ],
         links: [
           {
             href: "https://github.com/PhilipOe1612340/Fampedia",
-            desc: "find the code here"
+            desc: "find the code here",
           },
           {
             href: "https://fampedia.de",
-            desc: "site"
+            desc: "site",
           },
           { href: "https://angular.io/", desc: "Angular" },
           {
             href: "https://inno-space.de/projects/fampedia/",
-            desc: "project page"
-          }
+            desc: "project page",
+          },
         ],
-        image: "fampedia.png"
-      }
-    ]
+        image: "fampedia.png",
+      },
+    ],
   });
 
   items.push({
     label: "2018",
     content: [
-       {
+      {
         header: "Webdevelopment at ioxp",
         body:
           "During my internship semester, I worked at {0} as a web developer. Since the team was tiny in the beginning, I was able to take a peek into a wide spectrum of tasks including <b>Design, Testing, System architecture and advanced Web APIs.</b> I love learning about new technologies and I was able to implement/apply many cutting edge techniques. I mainly worked with {1}. Since I couldn't leave all the stuff I build there behind, I continued to work for ioxp as a working student after the semester was over. || Here are some more technologies I worked with:",
         list: ["Typescript", "RxJs", "Adobe XD", "Testcafe", "D3.js"],
         links: [
           { href: "https://www.ioxp.de/en/", desc: "ioxp" },
-          { href: "https://angular.io/", desc: "Angular" }
+          { href: "https://angular.io/", desc: "Angular" },
         ],
-        image: "wm.jpg"
+        image: "wm.jpg",
       },
       {
         header: "Smart Rockets",
@@ -125,25 +153,24 @@
         links: [
           {
             href: "http://blog.blprnt.com/blog/blprnt/project-smart-rockets",
-            desc: "Smart Rockets"
+            desc: "Smart Rockets",
           },
           {
             href:
               "https://philipoe1612340.github.io/MLE-uebungen/Woche2/index.html",
-            desc: "Live Version"
+            desc: "Live Version",
           },
           {
             href:
               "https://github.com/PhilipOe1612340/MLE-uebungen/tree/master/Woche2",
-            desc: "Code"
+            desc: "Code",
           },
-          { href: "https://p5js.org/", desc: "p5.js" }
+          { href: "https://p5js.org/", desc: "p5.js" },
         ],
-        image: "rockets.jpg"
-      }
-    ]
+        image: "rockets.jpg",
+      },
+    ],
   });
-
 
   items.push({
     label: "2017",
@@ -155,7 +182,10 @@
         list: ["Vue.js", "Docker + Compose", "Node.js"],
         links: [
           { href: "https://www.liveperson.com/", desc: "Liveperson" },
-          { href: "https://github.com/PhilipOe1612340/SEP-deploy", desc: "here" },
+          {
+            href: "https://github.com/PhilipOe1612340/SEP-deploy",
+            desc: "here",
+          },
         ],
         image: "SEP.png",
       },
@@ -167,12 +197,12 @@
         links: [
           { href: "https://vok-test.netlify.com/", desc: "find it here" },
           { href: "https://vuejs.org/", desc: "Vue.js" },
-          { href: "https://github.com/PhilipOe1612340/Vok", desc: "Code" }
+          { href: "https://github.com/PhilipOe1612340/Vok", desc: "Code" },
         ],
         image: "vok.svg",
-        background: true
-      }
-    ]
+        background: true,
+      },
+    ],
   });
 
   items.push({
@@ -187,12 +217,12 @@
           { href: "https://scratch.mit.edu/", desc: "Scratch" },
           {
             href: "https://en.wikipedia.org/wiki/A*_search_algorithm",
-            desc: "A* Pathfinding Algorithm"
-          }
+            desc: "A* Pathfinding Algorithm",
+          },
         ],
-        image: "aStart.jpg"
-      }
-    ]
+        image: "aStart.jpg",
+      },
+    ],
   });
 </script>
 
