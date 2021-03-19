@@ -100,7 +100,7 @@
 </style>
 
 <button>
-  <img class="small" class:background on:click={toggleOverlay} {src} {alt} />
+  <img class="small" class:background on:click={toggleOverlay} {src} {alt} loading="lazy"/>
 </button>
 
 {#if overlay}
