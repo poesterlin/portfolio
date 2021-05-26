@@ -26,14 +26,11 @@
       {
         header: "Webdevelopment at PTC",
         body:
-          "In September of 2020 iOXP, the company I was working for as a working student, was taken over by {1} {0}. I continued to work there since it was exiting to get to know a different and so much bigger company for the first time.",
-        list: [],
+          "In September of 2020 iOXP, the company I was working for as a working student, was taken over by {0}. I continued to work there since it was exiting to get to know a different and so much bigger company for the first time. || My task area shifted sighliy and I got the oportunity to lern a lot about Cloud Development, Kubernetes and Continuous Integration. I even created a complex pipeline that could automatically deploy to AWS Lambda for a new product I helped to architect. ||AWS Techologies used:",
+        list: ["Lambda", "Cloudformation using {1}", "Elastic Kubernes Service", "Aurora Serverless", "API Gateway", "S3", "Simple Queue Service"],
         links: [
-          {
-            href: "https://www.ptc.com/de/news/2020/ptc-uebernimmt-ioxp",
-            desc: "(german press release)",
-          },
           { href: "https://www.ptc.com/", desc: "PTC" },
+          { href: "https://aws.amazon.com/de/cdk/", desc: "AWS CDK" },
         ],
       },
       {
