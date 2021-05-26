@@ -29,7 +29,8 @@
   }
 
   :global(a) {
-    color: var(--accent) !important;
+    color: var(--links) !important;
+    font-weight: 600;
   }
 
   li {

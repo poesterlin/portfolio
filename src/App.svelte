@@ -24,9 +24,9 @@
     label: "Ongoing",
     content: [
       {
-        header: "Webdevelopment at PTC",
+        header: "Internship at PTC",
         body:
-          "In September of 2020 iOXP, the company I was working for as a working student, was taken over by {0}. I continued to work there since it was exiting to get to know a different and so much bigger company for the first time. || My task area shifted sighliy and I got the oportunity to lern a lot about Cloud Development, Kubernetes and Continuous Integration. I even created a complex pipeline that could automatically deploy to AWS Lambda for a new product I helped to architect. ||AWS Techologies used:",
+          "In September of 2020 iOXP, the company I was working for as a working student, was taken over by {0}. I continued to work there since it was exiting to get to know a different and so much bigger company for the first time. ||My task area shifted sighliy and I got the oportunity to lern a lot about Cloud Development, Kubernetes and Continuous Integration. I even created a complex pipeline that could automatically deploy to AWS Lambda for a new product I helped to architect. ||AWS Techologies used:",
         list: ["Lambda", "Cloudformation using {1}", "Elastic Kubernes Service", "Aurora Serverless", "API Gateway", "S3", "Simple Queue Service"],
         links: [
           { href: "https://www.ptc.com/", desc: "PTC" },
@@ -225,14 +225,15 @@
 
 <style>
   :global(body) {
-    --accent: #ffca28;
-    --background: #253136;
-    --borders: #add8e636;
+    --accent: #62929e;
+    --background: #393d3f;
+    --borders: #546a7b;
+    --links: #92cfdf;
     width: 1000px;
     max-width: 98vw;
     margin: auto;
     height: auto;
-    color: white;
+    color: #faf5f4;
     padding: 0;
     padding-bottom: 50px;
     background: linear-gradient(to left, black 5%, var(--background));
@@ -243,6 +244,7 @@
   @media (prefers-color-scheme: light) {
     :global(body) {
       --accent: #61c89d;
+      --links: #61c89d;
       --background: #f9f9f9;
       --borders: #00000052;
       color: #292929;
