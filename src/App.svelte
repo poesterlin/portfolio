@@ -62,7 +62,7 @@
         header: "Ufo Sightings Map",
         body: "For a geo visualisation project we created a fun web tool were you could explore reports of ufo sighings collected by the {0}. We got over 90 thousand reports from their webseite and it's a lot of fun to explore in an interactive way.|You can find instructions and the code {1}.||Technologies used:",
         list: ["Angular", "Docker", "Postgis"],
-        links: [{href:"http://www.nuforc.org/", desc: 'National UFO Reporting Center'}, {href: 'https://github.com/PhilipOe1612340/UfoVis', desc: 'here'}],
+        links: [{href:"http://www.nuforc.org/", desc: 'National UFO Reporting Center'}, {href: 'https://github.com/poesterlin/UfoVis', desc: 'here'}],
         image: "ufovis.webp",
       },
     ],
@@ -82,7 +82,7 @@
             desc: "Pytorch Machine Learning Framework",
           },
           {
-            href: "https://github.com/PhilipOe1612340/MMR-Autoencoder",
+            href: "https://github.com/poesterlin/MMR-Autoencoder",
             desc: "find the code here",
           },
         ],
@@ -110,7 +110,7 @@
         ],
         links: [
           {
-            href: "https://github.com/PhilipOe1612340/Fampedia",
+            href: "https://github.com/poesterlin/Fampedia",
             desc: "find the code here",
           },
           {
@@ -154,12 +154,12 @@
           },
           {
             href:
-              "https://philipoe1612340.github.io/MLE-uebungen/Woche2/index.html",
+              "https://poesterlin.github.io/MLE-uebungen/Woche2/index.html",
             desc: "Live Version",
           },
           {
             href:
-              "https://github.com/PhilipOe1612340/MLE-uebungen/tree/master/Woche2",
+              "https://github.com/poesterlin/MLE-uebungen/tree/master/Woche2",
             desc: "Code",
           },
           { href: "https://p5js.org/", desc: "p5.js" },
@@ -180,7 +180,7 @@
         links: [
           { href: "https://www.liveperson.com/", desc: "Liveperson" },
           {
-            href: "https://github.com/PhilipOe1612340/SEP-deploy",
+            href: "https://github.com/poesterlin/SEP-deploy",
             desc: "here",
           },
         ],
@@ -194,7 +194,7 @@
         links: [
           { href: "https://vok-test.netlify.com/", desc: "find it here" },
           { href: "https://vuejs.org/", desc: "Vue.js" },
-          { href: "https://github.com/PhilipOe1612340/Vok", desc: "Code" },
+          { href: "https://github.com/poesterlin/Vok", desc: "Code" },
         ],
         image: "vok.svg",
         background: true,
