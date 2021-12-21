@@ -14,10 +14,10 @@
         list: [],
         links: [
           { href: "https://www.github.com", desc: "Github" },
-          { href: "mailto:philip.oesterlin@gmail", desc: "Reach out" },
-        ],
-      },
-    ],
+          { href: "mailto:philip.oesterlin@gmail", desc: "Reach out" }
+        ]
+      }
+    ]
   });
 
   items.push({
@@ -27,11 +27,19 @@
         header: "Internship at PTC",
         body:
           "In September of 2020 iOXP, the company I was working for as a working student, was taken over by {0}. I continued to work there since it was exiting to get to know a different and so much bigger company for the first time. ||My task area shifted sighliy and I got the oportunity to lern a lot about Cloud Development, Kubernetes and Continuous Integration. I even created a complex pipeline that could automatically deploy to AWS Lambda for a new product I helped to architect. ||AWS Techologies used:",
-        list: ["Lambda", "Cloudformation using {1}", "Elastic Kubernes Service", "Aurora Serverless", "API Gateway", "S3", "Simple Queue Service"],
+        list: [
+          "Lambda",
+          "Cloudformation using {1}",
+          "Elastic Kubernes Service",
+          "Aurora Serverless",
+          "API Gateway",
+          "S3",
+          "Simple Queue Service"
+        ],
         links: [
           { href: "https://www.ptc.com/", desc: "PTC" },
-          { href: "https://aws.amazon.com/de/cdk/", desc: "AWS CDK" },
-        ],
+          { href: "https://aws.amazon.com/de/cdk/", desc: "AWS CDK" }
+        ]
       },
       {
         header: "Masters degree at University of Constance",
@@ -41,31 +49,60 @@
           "Data Visualisation",
           "Machine Learning",
           "Data Science",
-          "Virtual Reality Applications for Mental Health",
+          "Virtual Reality Applications for Mental Health"
         ],
-        links: [{ href: "https://ogdf.uos.de/", desc: "OGDF" }],
-      },
-    ],
+        links: [{ href: "https://ogdf.uos.de/", desc: "OGDF" }]
+      }
+    ]
   });
 
   items.push({
     label: "2021",
     content: [
       {
+        header: "Volleyball Registration App",
+        body:
+          "To comply with local Covid regulations I created a {0} for my universities Volleyball program. It has an easy and clean interface where users can register by name and check their registration status using a registration code. You can even get notified if someone cancels and you are no longer on the waitlist. For autherized users, there is also an admin area to manage the courses. The project is open source and avaliable on {1}. ||I was able to host everything for free using:",
+        list: [
+          "Netlify hosting",
+          "Serverless MongoDB",
+          "Serverless AWS Lambda Backend"
+        ],
+        links: [
+          {
+            href: "https://volleyballhtwg.netlify.app",
+            desc: "registration app"
+          },
+          {
+            href: "https://github.com/poesterlin/Volleyball",
+            desc: "my Github page"
+          }
+        ],
+        image: "volleyball.webp"
+      },
+      {
         header: "Sentiment Analisys for Corona Tweets",
-        body: "For a practical data science project, my team and I were tasked to create an interactive data visualistion tool from the ground up. We started by collecting tweets from the twitter api where users were writing about the pandemic. Then we trained a neural network on some labeled data that was able to predict the mood the author was in. Together with data about the pandemic this was shown in an interactive map.|We deployed it in the universities kubernetes cluster.||Technologies used:",
+        body:
+          "For a practical data science project, my team and I were tasked to create an interactive data visualistion tool from the ground up. We started by collecting tweets from the twitter api where users were writing about the pandemic. Then we trained a neural network on some labeled data that was able to predict the mood the author was in. Together with data about the pandemic this was shown in an interactive map.|We deployed it in the universities kubernetes cluster.||Technologies used:",
         list: ["Svelte", "Python", "Tensorflow + Keras", "Postgis"],
         links: [],
-        image: "moodvis.webp",
+        image: "moodvis.webp"
       },
       {
         header: "Ufo Sightings Map",
-        body: "For a geo visualisation project we created a fun web tool were you could explore reports of ufo sighings collected by the {0}. We got over 90 thousand reports from their webseite and it's a lot of fun to explore in an interactive way.|You can find instructions and the code {1}.||Technologies used:",
+        body:
+          "For a geo visualisation project we created a fun web tool were you could explore reports of ufo sighings collected by the {0}. We got over 90 thousand reports from their webseite and it's a lot of fun to explore in an interactive way.|You can find instructions and the code {1}.||Technologies used:",
         list: ["Angular", "Docker", "Postgis"],
-        links: [{href:"http://www.nuforc.org/", desc: 'National UFO Reporting Center'}, {href: 'https://github.com/poesterlin/UfoVis', desc: 'here'}],
-        image: "ufovis.webp",
-      },
-    ],
+        links: [
+          {
+            href: "http://www.nuforc.org/",
+            desc: "National UFO Reporting Center"
+          },
+          { href: "https://github.com/poesterlin/UfoVis", desc: "here" }
+        ],
+        image: "ufovis.webp"
+      }
+    ]
   });
 
   items.push({
@@ -79,16 +116,16 @@
         links: [
           {
             href: "https://pytorch.org/",
-            desc: "Pytorch Machine Learning Framework",
+            desc: "Pytorch Machine Learning Framework"
           },
           {
             href: "https://github.com/poesterlin/MMR-Autoencoder",
-            desc: "find the code here",
-          },
+            desc: "find the code here"
+          }
         ],
-        image: "pytorch.jpg",
-      },
-    ],
+        image: "pytorch.jpg"
+      }
+    ]
   });
 
   items.push({
@@ -106,26 +143,26 @@
           "GitLab CI",
           "Sharp.js",
           "Socket.io",
-          "AWS & Netlify Hosting",
+          "AWS & Netlify Hosting"
         ],
         links: [
           {
             href: "https://github.com/poesterlin/Fampedia",
-            desc: "find the code here",
+            desc: "find the code here"
           },
           {
             href: "https://fampedia.de",
-            desc: "site",
+            desc: "site"
           },
           { href: "https://angular.io/", desc: "Angular" },
           {
             href: "https://inno-space.de/projects/fampedia/",
-            desc: "project page",
-          },
+            desc: "project page"
+          }
         ],
-        image: "fampedia.png",
-      },
-    ],
+        image: "fampedia.png"
+      }
+    ]
   });
 
   items.push({
@@ -138,9 +175,9 @@
         list: ["Typescript", "RxJs", "Adobe XD", "Testcafe", "D3.js"],
         links: [
           { href: "https://www.ioxp.de/en/", desc: "ioxp" },
-          { href: "https://angular.io/", desc: "Angular" },
+          { href: "https://angular.io/", desc: "Angular" }
         ],
-        image: "wm.jpg",
+        image: "wm.jpg"
       },
       {
         header: "Smart Rockets",
@@ -150,23 +187,22 @@
         links: [
           {
             href: "http://blog.blprnt.com/blog/blprnt/project-smart-rockets",
-            desc: "Smart Rockets",
+            desc: "Smart Rockets"
           },
           {
-            href:
-              "https://poesterlin.github.io/MLE-uebungen/Woche2/index.html",
-            desc: "Live Version",
+            href: "https://poesterlin.github.io/MLE-uebungen/Woche2/index.html",
+            desc: "Live Version"
           },
           {
             href:
               "https://github.com/poesterlin/MLE-uebungen/tree/master/Woche2",
-            desc: "Code",
+            desc: "Code"
           },
-          { href: "https://p5js.org/", desc: "p5.js" },
+          { href: "https://p5js.org/", desc: "p5.js" }
         ],
-        image: "rockets.jpg",
-      },
-    ],
+        image: "rockets.jpg"
+      }
+    ]
   });
 
   items.push({
@@ -181,10 +217,10 @@
           { href: "https://www.liveperson.com/", desc: "Liveperson" },
           {
             href: "https://github.com/poesterlin/SEP-deploy",
-            desc: "here",
-          },
+            desc: "here"
+          }
         ],
-        image: "SEP.png",
+        image: "SEP.png"
       },
       {
         header: "Universal Vocabulary Test",
@@ -194,12 +230,12 @@
         links: [
           { href: "https://vok-test.netlify.com/", desc: "find it here" },
           { href: "https://vuejs.org/", desc: "Vue.js" },
-          { href: "https://github.com/poesterlin/Vok", desc: "Code" },
+          { href: "https://github.com/poesterlin/Vok", desc: "Code" }
         ],
         image: "vok.svg",
-        background: true,
-      },
-    ],
+        background: true
+      }
+    ]
   });
 
   items.push({
@@ -214,12 +250,12 @@
           { href: "https://scratch.mit.edu/", desc: "Scratch" },
           {
             href: "https://en.wikipedia.org/wiki/A*_search_algorithm",
-            desc: "A* Pathfinding Algorithm",
-          },
+            desc: "A* Pathfinding Algorithm"
+          }
         ],
-        image: "aStart.jpg",
-      },
-    ],
+        image: "aStart.jpg"
+      }
+    ]
   });
 </script>
 
