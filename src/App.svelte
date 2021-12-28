@@ -49,7 +49,9 @@
           "Data Visualisation",
           "Machine Learning",
           "Data Science",
-          "Virtual Reality Applications for Mental Health"
+          "Virtual Reality Applications for Mental Health",
+          "Human Computer Interaction",
+          "Teleportation in Virtual Reality using Hand Gestures on the Oculus Quest",
         ],
         links: [{ href: "https://ogdf.uos.de/", desc: "OGDF" }]
       }
@@ -111,7 +113,7 @@
       {
         header: "Image Search Engine",
         body:
-          "For a university course my team and I created a search engine that can find similar images to a refrence image. We used an auto encoder model that is able to compress the information of on a 32x32 image to only 10 numbers. This vector can than be used to compare images. Without the compression of the model you can not directly compare images. They can show almost the same things but have different very pixel values. We used the {0} for this project. We also included a lot of evaluation methods and visualisations to test the results. |To get a closer look, {1}",
+          "For a university course my team and I created a search engine that can find similar images to a refrence image. We used an auto encoder model that is able to compress the information of on a 32x32 image to only 10 numbers. This vector can than be used to compare images. Without the abstraction of the model you can not directly compare images, since they can show almost the same things but have different pixel values. We used the {0} for this project. We also included a lot of evaluation methods and visualisations to test the results. |To get a closer look, {1}.",
         list: [],
         links: [
           {
