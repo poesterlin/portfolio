@@ -126,6 +126,14 @@
           }
         ],
         image: "pytorch.jpg"
+      },
+      {
+        header: "Emoji Memory",
+        body:
+          "During the first weeks of the pandemic I got the idea to have some socially distant fun with friends by playing memory. I created an online memory that uses websockets for fast communication and random emojis on the cards. This was surprisingly fun and I still played it occasionally long after I created it. It uses workers in the backend so people are able to play mulitple games simulaniously and you can start a public game for anyone to join or create a private session. There are also quick-reactions to send to your oppenent which make it even more interactive and fun to use.",
+        list: [],
+        links: [],
+        image: "memory.webp"
       }
     ]
   });
