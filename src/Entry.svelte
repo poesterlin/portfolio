@@ -5,15 +5,42 @@
   $: item = config;
 
   function replaceLinks(str, links = []) {
-    return str.replace(/\|/g, "<br>").replace(/\{\d+\}/g, match => {
-      const li = links[Number(match.slice(1, -1))];
-      if (!li) {
-        return "";
-      }
-      return `<a href="${li.href}">${li.desc}</a>`;
-    });
+    return str
+      .replace(/\|/g, "<br>")
+      .replace(/\{\d+\}/g, (match) => {
+        const li = links[Number(match.slice(1, -1))];
+        if (!li) {
+          return "";
+        }
+        return `<a href="${li.href}">${li.desc}</a>`;
+      })
+      .replace(/\|/g, "<br>")
+      .replace(/_.*_/g, (match) => {
+        return `<b>${match.slice(1, -1)}</b>`;
+      });
   }
 </script>
+
+<div class="content">
+  <h3>{item.header}</h3>
+  {#if item.image}
+    <Image
+      src="/images/{item.image}"
+      alt="{item.header} image"
+      background={item.background}
+    />
+  {/if}
+  <span>
+    {@html replaceLinks(item.body, item.links)}
+  </span>
+  <ul>
+    {#each item.list as li}
+      <li>
+        {@html replaceLinks(li, item.links)}
+      </li>
+    {/each}
+  </ul>
+</div>
 
 <style>
   .content {
@@ -37,23 +64,3 @@
     margin-left: 3%;
   }
 </style>
-
-<div class="content">
-  <h3>{item.header}</h3>
-  {#if item.image}
-    <Image
-      src="/images/{item.image}"
-      alt="{item.header} image"
-      background={item.background} />
-  {/if}
-  <span>
-    {@html replaceLinks(item.body, item.links)}
-  </span>
-  <ul>
-    {#each item.list as li}
-      <li>
-        {@html replaceLinks(li, item.links)}
-      </li>
-    {/each}
-  </ul>
-</div>
