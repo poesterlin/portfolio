@@ -36,9 +36,15 @@
           { href: "https://www.ugdtodo.com/", desc: "User Generated Design" },
         ],
       },
+    ],
+  });
+
+  items.push({
+    label: "2023",
+    content: [
       {
         header: "StoHome App",
-        body: `StoHome is a project I worked on for a client. The goal was to create an app that allows customers to preview their house before a renovation. The app is available on Android, iOS and as a web app. I was able to lead a small team of 4 engineers, working with {0} and {1}. My team and I where able to bring complex image visualizations to the web. We are focused on supporting low-end hardware and mobile devices, which presents a unique challenge in terms of performance requirements and offline support. It was a lot of fun to work with such a great team and I learned a lot about the latest web technologies. ||The browser technologies used stand out the most:`,
+        body: `StoHome is a project I worked on for a client at UGD. The goal was to create an app that allows customers to preview their house before a renovation. The app is available on Android, iOS and as a web app. I was able to lead a small team of 4 engineers, working with {0} and {1}. My team and I where able to bring complex image visualizations to the web. We are focused on supporting low-end hardware and mobile devices, which presents a unique challenge in terms of performance requirements and offline support. It was a lot of fun to work with such a great team and I learned a lot about the latest web technologies. ||The browser technologies used stand out the most:`,
         list: [
           "Web Workers with {2}",
           "Custom OpenCV WebAssembly Build, optimized for file size",
