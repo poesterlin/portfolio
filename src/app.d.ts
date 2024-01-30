@@ -5,9 +5,11 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		// interface PageState {}
+		interface PageState {
+			zoomImageUri?: string;
+		}
 		// interface Platform {}
 	}
 }
 
-export {};
+export { };

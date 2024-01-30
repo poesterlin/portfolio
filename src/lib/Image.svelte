@@ -1,60 +1,22 @@
-<script>
-  import { fade } from "svelte/transition";
-  import { cubicInOut } from "svelte/easing";
+<script lang="ts">
+  import { pushState } from "$app/navigation";
 
-  export let src;
-  export let alt;
-  export let background;
+  export let src: string;
+  export let alt: string;
+  export let background = false;
 
-  $: overlay = false;
-
-  function toggleOverlay(e) {
-    overlay = !overlay;
-    e.cancelBubble = true;
-    if (overlay) {
-      window.location.hash = "img";
-      window.addEventListener("popstate", () => (overlay = false), {
-        once: true,
-      });
-    } else {
-      window.history.back();
-    }
-  }
-
-  function zoom(node, { duration = 350 }) {
-    return {
-      delay: 0,
-      duration,
-      easing: cubicInOut,
-      css: (t) => `opacity: ${t}; transform: scale(${t})`,
-    };
+  function openOverlay() {
+    pushState("", { zoomImageUri: src });
   }
 </script>
 
-<button on:click={toggleOverlay}>
-  <img class="small" class:background {src} {alt} loading="lazy" />
+<button on:click={openOverlay}>
+  <img class:background {src} {alt} loading="lazy" />
 </button>
-
-{#if overlay}
-  <div
-    class="overlayContainer"
-    on:click={toggleOverlay}
-    on:keydown={toggleOverlay}
-    role="button"
-    tabindex="0"
-    aria-roledescription="image overlay"
-  >
-    <img class="big" class:background {src} {alt} in:zoom out:fade />
-  </div>
-{/if}
 
 <style>
   img {
     object-fit: contain;
-    display: block;
-  }
-
-  img.small {
     max-width: 100%;
     max-height: 40vh;
     position: relative;
@@ -62,33 +24,22 @@
     border-radius: 4px;
   }
 
-  img.big {
-    max-width: calc(96vw - 25px);
-    max-height: calc(94vh - 25px);
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
-
   button {
+    display: flex;
     background: transparent;
-    color: #fff;
     position: relative;
     margin: 35px auto;
-    display: block;
     border: 0;
     padding: 0;
   }
+
   @media (min-width: 600px) {
     button:hover::before {
       box-shadow:
         4px 4px var(--background),
         5px 5px var(--accent);
     }
+
     button::before {
       content: "";
       position: absolute;
@@ -106,15 +57,6 @@
     }
   }
 
-  .overlayContainer {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #48484866;
-    z-index: 20;
-  }
   .background {
     background: white;
   }

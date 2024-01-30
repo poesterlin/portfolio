@@ -1,12 +1,13 @@
-<script>
-  import Image from "$lib/Image.svelte";
+<script lang="ts">
+  import Image from "./Image.svelte";
   import Scroller from "./Scroller.svelte";
-  export let config;
+  import type { Item, Link } from "./types";
 
-  let item = config;
-  let images = item.images ?? (item.image ? [item.image] : undefined);
+  export let item: Item;
 
-  function replaceLinks(str, links = []) {
+  $: images = item && item.images;
+
+  function replaceLinks(str: string, links: Link[] = []) {
     return str
       .replace(/\|/g, "<br>")
       .replace(/\{\d+\}/g, (match) => {
@@ -23,30 +24,32 @@
   }
 </script>
 
-<div class="content">
-  <h3>{item.header}</h3>
-  {#if images}
-    {#if images.length === 1}
-      <Image
-        src="/images/{images[0]}"
-        alt="{item.header} image"
-        background={item.background}
-      />
-    {:else}
-      <Scroller {images} background={item.background} />
+{#if item}
+  <div class="content">
+    <h3>{item.header}</h3>
+    {#if images}
+      {#if images.length === 1}
+        <Image
+          src="/images/{images[0]}"
+          alt="{item.header} image"
+          background={item.background}
+        />
+      {:else}
+        <Scroller {images} background={item.background} />
+      {/if}
     {/if}
-  {/if}
-  <span>
-    {@html replaceLinks(item.body, item.links)}
-  </span>
-  <ul>
-    {#each item.list as li}
-      <li>
-        {@html replaceLinks(li, item.links)}
-      </li>
-    {/each}
-  </ul>
-</div>
+    <span>
+      {@html replaceLinks(item.body, item.links)}
+    </span>
+    <ul>
+      {#each item.list as li}
+        <li>
+          {@html replaceLinks(li, item.links)}
+        </li>
+      {/each}
+    </ul>
+  </div>
+{/if}
 
 <style>
   .content {
