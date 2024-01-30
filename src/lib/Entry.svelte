@@ -1,8 +1,10 @@
 <script>
   import Image from "$lib/Image.svelte";
+  import Scroller from "./Scroller.svelte";
   export let config;
 
-  $: item = config;
+  let item = config;
+  let images = item.images ?? (item.image ? [item.image] : undefined);
 
   function replaceLinks(str, links = []) {
     return str
@@ -20,6 +22,31 @@
       });
   }
 </script>
+
+<div class="content">
+  <h3>{item.header}</h3>
+  {#if images}
+    {#if images.length === 1}
+      <Image
+        src="/images/{images[0]}"
+        alt="{item.header} image"
+        background={item.background}
+      />
+    {:else}
+      <Scroller {images} background={item.background} />
+    {/if}
+  {/if}
+  <span>
+    {@html replaceLinks(item.body, item.links)}
+  </span>
+  <ul>
+    {#each item.list as li}
+      <li>
+        {@html replaceLinks(li, item.links)}
+      </li>
+    {/each}
+  </ul>
+</div>
 
 <style>
   .content {
@@ -43,23 +70,3 @@
     margin-left: 3%;
   }
 </style>
-
-<div class="content">
-  <h3>{item.header}</h3>
-  {#if item.image}
-    <Image
-      src="/images/{item.image}"
-      alt="{item.header} image"
-      background={item.background} />
-  {/if}
-  <span>
-    {@html replaceLinks(item.body, item.links)}
-  </span>
-  <ul>
-    {#each item.list as li}
-      <li>
-        {@html replaceLinks(li, item.links)}
-      </li>
-    {/each}
-  </ul>
-</div>

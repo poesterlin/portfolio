@@ -14,7 +14,7 @@
     if (overlay) {
       window.location.hash = "img";
       window.addEventListener("popstate", () => (overlay = false), {
-        once: true
+        once: true,
       });
     } else {
       window.history.back();
@@ -26,10 +26,27 @@
       delay: 0,
       duration,
       easing: cubicInOut,
-      css: t => `opacity: ${t}; transform: scale(${t})`
+      css: (t) => `opacity: ${t}; transform: scale(${t})`,
     };
   }
 </script>
+
+<button on:click={toggleOverlay}>
+  <img class="small" class:background {src} {alt} loading="lazy" />
+</button>
+
+{#if overlay}
+  <div
+    class="overlayContainer"
+    on:click={toggleOverlay}
+    on:keydown={toggleOverlay}
+    role="button"
+    tabindex="0"
+    aria-roledescription="image overlay"
+  >
+    <img class="big" class:background {src} {alt} in:zoom out:fade />
+  </div>
+{/if}
 
 <style>
   img {
@@ -68,7 +85,9 @@
   }
   @media (min-width: 600px) {
     button:hover::before {
-      box-shadow: 4px 4px var(--background), 5px 5px var(--accent);
+      box-shadow:
+        4px 4px var(--background),
+        5px 5px var(--accent);
     }
     button::before {
       content: "";
@@ -81,7 +100,9 @@
       height: 100%;
       z-index: 0;
       transition: 400ms all;
-      box-shadow: 4px 4px var(--background), 5px 5px var(--borders);
+      box-shadow:
+        4px 4px var(--background),
+        5px 5px var(--borders);
     }
   }
 
@@ -98,20 +119,3 @@
     background: white;
   }
 </style>
-
-<button>
-  <img class="small" class:background on:click={toggleOverlay} {src} {alt} loading="lazy"/>
-</button>
-
-{#if overlay}
-  <div class="overlayContainer" on:click={toggleOverlay}>
-    <img
-      class="big"
-      class:background
-      {src}
-      {alt}
-      on:click={toggleOverlay}
-      in:zoom
-      out:fade />
-  </div>
-{/if}
