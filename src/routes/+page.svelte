@@ -60,6 +60,23 @@
           },
         ],
       },
+      {
+        header: "EInk Picture Frame",
+        body: `For my girlfriend's birthday I created a picture frame from a 7 color eInk display. To upload images, I developed a website that would handle the dithering of images to convert them to only 7 colors and allow you to do some basic editing of brightness and contrast. Using an Edge Function the images are then uploaded to Cloud Storage. A Raspberry Pi then downloads the images and displays them on the eInk display. It gets notified using the MQTT protocol. You can also use the Web Bluetooth Api to change the Pi's Wifi settings. ||Technologies used:`,
+        images: ["eink.webp", "upload.webp"],
+        links: [
+          { desc: "AssemblyScript", href: "https://www.assemblyscript.org/" },
+        ],
+        list: [
+          "SvelteKit",
+          "{0} for high performance dithering",
+          "WebWorker",
+          "Web Bluetooth Api",
+          "Rust on Raspberry Pi",
+          "MQTT",
+          "3D Printing and Modelling",
+        ],
+      },
     ],
   });
 
