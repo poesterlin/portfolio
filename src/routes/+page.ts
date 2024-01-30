@@ -39,6 +39,22 @@ items.push({
 });
 
 items.push({
+    label: "2024",
+    content: [
+        {
+            header: "Spotify Playlist Memory",
+            body: `I created a small web app that allows you to generate a Spotify memory party game. It uses the Spotify Web Api to get the playlists and the songs. It generates a PDF for you to print. You can {0}. ||A fiend of mine had the idea for this but had to manually generate all the QR codes and print them. I thought this could be automated and it was a lot of fun to create.`,
+            list: [],
+            links: [
+                { href: "https://playlist-memory.oesterlin.dev/", desc: "test it here" },
+            ],
+            images: ["playlist.webp", "qr.png"],
+        },
+
+    ]
+})
+
+items.push({
     label: "2023",
     content: [
         {
@@ -138,7 +154,11 @@ items.push({
                     desc: "my Github page",
                 },
             ],
-            images: ["volleyball.webp"],
+            images: ["volleyball.webp", "volleyball2.webp", "volleyball3.webp"],
+            additional: {
+                header: "Update 2023",
+                body: "In 2023 the code was completely rewritten to with proper user accounts instead of a token based system. This allowed me to simply the design a lot."
+            },
         },
         {
             header: "Sentiment Analisys for Corona Tweets",
@@ -146,6 +166,22 @@ items.push({
             list: ["Svelte", "Python", "Tensorflow + Keras", "Postgis"],
             links: [],
             images: ["moodvis.webp"],
+        },
+        {
+            header: "VR Escape Room - MissionRA17",
+            body: "For a university course on VR my team and I created a small escape room game. The game is set in a creepy, broken space ship. You have to solve puzzles to fix the power generators and get to the escape pod. We used the {0} to create the game. It was a lot of fun to work with the engine and to create a game in VR. ||You can {1}.",
+            list: ["Unity", "C#", "Oculus Quest"],
+            images: ["navigation.jpg", "engine.jpg", "capsule.jpg", "storage.jpg",],
+            links: [
+                {
+                    desc: "watch a trailer here",
+                    href: "https://www.youtube.com/watch?v=mQOPCBI2rsw",
+                },
+                {
+                    desc: "download it here",
+                    href: "https://github.com/poesterlin/MissionRA17",
+                }
+            ],
         },
         {
             header: "Ufo Sightings Map",

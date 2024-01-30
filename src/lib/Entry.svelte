@@ -48,6 +48,15 @@
         </li>
       {/each}
     </ul>
+    {#if item.additional}
+      {@const additional = item.additional}
+      <details>
+        <summary>{additional.header}</summary>
+        <span>
+          {@html replaceLinks(additional.body, item.links)}
+        </span>
+      </details>
+    {/if}
   </div>
 {/if}
 
@@ -71,5 +80,10 @@
 
   li {
     margin-left: 3%;
+  }
+
+  summary {
+    font-weight: 600;
+    margin-top: 35px;
   }
 </style>

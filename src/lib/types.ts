@@ -10,6 +10,10 @@ export interface Item {
     links: Link[];
     images?: string | string[];
     background?: boolean;
+    additional?: {
+        header: string;
+        body: string;
+    }
 };
 
 export interface Link {
